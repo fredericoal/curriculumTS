@@ -63,7 +63,7 @@ export default defineComponent({
   </button>
 
   <p v-if="count !== null" style="color:var(--muted);font-size:13px">Total reads: <strong>{{ count }}</strong></p>
-  <p v-else>Loading...</p>
+  <p v-else style="color:var(--muted);font-size:13px">Loading...</p>
 
 </template>
 

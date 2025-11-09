@@ -310,61 +310,6 @@
   </html>
 </template>
 
-
-<!-- <script lang="ts">
-import { onMounted, onUnmounted, ref, defineComponent } from 'vue';
-import BadgeTag from './components/BadgeTag.vue';
-import LinkTag from './components/LinkTag.vue';
-import CounterComponent from './components/CounterComponent.vue';
-import { db, collection, getDocs, addDoc } from './firebase';
-import { doc, onSnapshot, updateDoc, increment, setDoc, getDoc } from 'firebase/firestore';
-
-export default defineComponent({
-  name: 'CurriculumVitae',
-  components: { BadgeTag, LinkTag, CounterComponent },
-  setup() {
-    const docRef = doc(db, "stats", "visits")
-    const count = ref<number | null>(null)
-    let unsubscribe: (() => void) | null = null
-
-    onMounted(async () => {
-      // 1️⃣ Verifica se o documento já existe
-      console.log('Trying to connect to DB..')
-      const existing = await getDoc(docRef)
-      console.log('DB is connected!')
-      // 2️⃣ Se não existe, cria com count = 0
-      if (!existing.exists()) {
-        await setDoc(docRef, { count: 0 })
-        console.log('Initializing Counter')
-      }
-
-      // 3️⃣ Só depois disso começa a escutar mudanças
-      unsubscribe = onSnapshot(docRef, (snapshot) => {
-        if (snapshot.exists()) {
-          count.value = snapshot.data().count
-          console.log('Counter initialized! (', count.value, ')')
-        }
-      })
-    })
-
-    onUnmounted(() => {
-      if (unsubscribe) unsubscribe()
-    })
-
-    async function incrementCounter() {
-      // 4️⃣ Incrementa o valor atual
-      await updateDoc(docRef, { count: increment(1) })
-      console.log('Counter incremented!')
-    }
-
-    return {
-      count,
-      incrementCounter
-    }
-  }
-})
-</script> -->
-
 <script lang="ts">
 import BadgeTag from './components/BadgeTag.vue';
 import LinkTag from './components/LinkTag.vue';
@@ -412,6 +357,7 @@ body {
 
 .container {
   width: 60vw;
+  /* min-width: 800px; */
   margin: 0;
 }
 
@@ -543,7 +489,8 @@ footer {
 
   .container {
     box-shadow: none;
-    margin: 0
+    margin: 0;
+    width: 90vw;
   }
 
   main {
@@ -559,7 +506,12 @@ footer {
   }
 
   header {
-    flex-direction: row
+    flex-direction: row;
+    display: grid;
+  }
+
+  .container {
+    width: 90vw;
   }
 
   .sidebar {
