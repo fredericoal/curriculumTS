@@ -37,17 +37,11 @@
             <section>
               <h2>Personal Statement</h2>
               <div class="paragraph">
-                I'm an easygoing person who has been passionate about technology since childhood and have always been
-                committed to my goals.<br>
-
-                I believe my <strong>soft skills are strong</strong>, as I have been able to adapt and grow quickly when
-                exposed to new
-                environments and challenges throughout my career. My key strengths include passion for what I do,
-                resilience to think strategically about the future, and a solid mathematical background that helps me
-                solve complex problems.<br>
-
-                On a personal level, I love exploring new cultures through travel, and I also enjoy playing the piano as
-                a hobby.<br>
+                I always have been passionate about technology. I believe my <strong>soft skills are strong</strong>,
+                as I have been able to adapt and grow quickly when exposed to new environments and challenges throughout
+                my career. My key strengths include passion for what I do, resilience to think strategically about the
+                future, and a solid mathematical background that helps me solve complex problems. On a personal level, I
+                love exploring new cultures through travel, and I also enjoy playing the piano as a hobby.<br>
 
                 I have a background that spans both research and the industrial sector. I completed my PhD in
                 Computer Science, where I worked with computer vision and information retrieval. I also hold a Master’s
@@ -61,24 +55,21 @@
                 rapid expansion.<br>
 
                 As an <strong>Engineering Leader</strong>, I'm driven by curiosity, collaboration, and impact. I focus
-                on empowering
-                teams to deliver reliable, scalable, and user-centered products that create measurable business
-                value.<br>
+                on empowering teams to deliver reliable, scalable, and user-centered products that create measurable
+                business value.<br>
 
                 As an <strong>Engineering Manager</strong>, I worked with Product Managers, Tech Leads, and C-level
-                executives to
-                organize and align cross-functional roadmaps, while ensuring code quality and driving key architecture
-                decisions. By owning the entire software delivery pipeline, I was able to create scalable and efficient
-                solutions that accelerated development, improved reliability, and aligned technology with business
-                goals.<br>
+                executives to organize and align cross-functional roadmaps, while ensuring code quality and driving key
+                architecture decisions. By owning the entire software delivery pipeline, I was able to create scalable
+                and efficient solutions that accelerated development, improved reliability, and aligned technology with
+                business goals.<br>
 
                 Having lived in the United Kingdom for four years, I am now returning to Europe - a long-held personal
                 goal - as my wife relocates to Tallinn, Estonia. This transition represents an exciting opportunity to
                 continue growing professionally in an international environment.<br>
 
                 I'm currently <strong>seeking roles as a Software Engineering Manager or Software Engineering
-                  Lead</strong>, where I can
-                continue learning and advancing the state of the art in technology.
+                  Lead</strong>, where I can continue learning and advancing the state of the art in technology.
               </div>
             </section>
           </div>

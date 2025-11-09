@@ -7,28 +7,36 @@ export default defineComponent({
   name: 'CounterComponent',
   components: { BadgeTag },
   setup() {
-    const docRef = doc(db, "stats", "visits")
+    const docRef = doc(db, "stats", "reads")
+    const docViews = doc(db, "stats", "visits")
     const docRefCountry = doc(db, "stats", "country")
 
     const count = ref<number | null>(null)
+    const countviews = ref<number | null>(null)
     const country = ref<string | null>(null)
 
     let unsubscribe: (() => void) | null = null
     let unsubscribe2: (() => void) | null = null
+    let unsubscribe3: (() => void) | null = null
     onMounted(async () => {
 
-      country.value = 'Loading';
+      country.value = 'Loading...';
 
       // 1️⃣ Verifica se o documento já existe
       console.log('Trying to connect to DB..')
       const existing = await getDoc(docRef)
+
       console.log('DB is connected!')
       // 2️⃣ Se não existe, cria com count = 0
       if (!existing.exists()) {
         await setDoc(docRef, { count: 0 })
         console.log('Initializing Counter')
       }
-
+      const existingviews = await getDoc(docViews)
+      if (!existingviews.exists()) {
+        await setDoc(docRef, { count: 0 })
+        console.log('Initializing Counter')
+      }
       // 3️⃣ Só depois disso começa a escutar mudanças
       unsubscribe = onSnapshot(docRef, (snapshot) => {
         if (snapshot.exists()) {
@@ -38,17 +46,27 @@ export default defineComponent({
       })
 
       // 3️⃣ Só depois disso começa a escutar mudanças
-      unsubscribe2 = onSnapshot(docRefCountry, (snapshot) => {
+      unsubscribe2 = onSnapshot(docViews, (snapshot) => {
+        if (snapshot.exists()) {
+          countviews.value = snapshot.data().count
+          console.log('Counter views updated (', countviews.value, ')')
+        }
+      })
+
+      unsubscribe3 = onSnapshot(docRefCountry, (snapshot) => {
         if (snapshot.exists()) {
           country.value = snapshot.data().last
           console.log('Country updated (', country.value, ')')
         }
       })
+
+      await updateDoc(docViews, { count: increment(1) })
     })
 
     onUnmounted(() => {
       if (unsubscribe) unsubscribe()
       if (unsubscribe2) unsubscribe2()
+      if (unsubscribe3) unsubscribe3()
     })
 
     async function incrementCounter() {
@@ -58,7 +76,7 @@ export default defineComponent({
 
       const response = await fetch('https://ipinfo.io/json?token=e4b8d45a85b936')
       const data = await response.json()
-      const nowUtc  = new Date();
+      const nowUtc = new Date();
       country.value = nowUtc.toUTCString().substring(5) + ', ' + data.city + ', ' + data.country || 'Unknown'
       if (country.value != 'Unknown') {
         await setDoc(docRefCountry, { last: country.value, time: new Date() }, { merge: true })
@@ -70,6 +88,7 @@ export default defineComponent({
 
     return {
       count,
+      countviews,
       country,
       incrementCounter
     }
@@ -87,7 +106,8 @@ export default defineComponent({
 
   <p v-if="count !== null && country !== null" style="color:var(--muted);font-size:13px">
     Total reads: <strong>{{ count }}</strong><br>
-    Last click: <strong>{{ country }}</strong></p>
+    Total views: <strong>{{ countviews }}</strong><br>
+    Last read: <strong>{{ country }}</strong></p>
   <p v-else style="color:var(--muted);font-size:13px">Loading...</p>
 
 </template>
