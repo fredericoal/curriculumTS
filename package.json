@@ -7,9 +7,12 @@
     "build": "run-p type-check build-only",
     "preview": "vite preview",
     "build-only": "vite build",
+    "deploy": "gh-pages -d dist",
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
   },
   "dependencies": {
+    "@dataconnect/generated": "file:src/dataconnect-generated",
+    "firebase": "^12.5.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
