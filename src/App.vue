@@ -295,7 +295,7 @@
                 strLink="https://halajun.github.io/3dor15shrec" />
             </ul>
           </section>
-
+          <br></br>
           <CounterComponent></CounterComponent>
 
         </div>
