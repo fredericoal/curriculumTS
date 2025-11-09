@@ -37,7 +37,8 @@
                 I'm an easygoing person who has been passionate about technology since childhood and have always been
                 committed to my goals.<br>
 
-                I believe my soft skills are strong, as I have been able to adapt and grow quickly when exposed to new
+                I believe my <strong>soft skills are strong</strong>, as I have been able to adapt and grow quickly when
+                exposed to new
                 environments and challenges throughout my career. My key strengths include passion for what I do,
                 resilience to think strategically about the future, and a solid mathematical background that helps me
                 solve complex problems.<br>
@@ -51,18 +52,28 @@
                 for detecting planes in 3D.<br>
 
                 My most recent experience was at Nelogica, where I had the opportunity to grow as both a manager and a
-                leader. During my seven years there, I earned seven promotions - a reflection of my commitment,
-                dedication, and drive to continually reach the next level.<br>
+                leader. During my seven years there, I <strong>earned seven promotions</strong> - a reflection of my
+                commitment, dedication, and drive to continually reach the next level. During my time at the company, it
+                grew from 60 to over 700 collaborators, scaling both the technology and the organization to support
+                rapid expansion.<br>
 
-                As an engineering leader, I'm driven by curiosity, collaboration, and impact. I focus on empowering
+                As an <strong>Engineering Leader</strong>, I'm driven by curiosity, collaboration, and impact. I focus
+                on empowering
                 teams to deliver reliable, scalable, and user-centered products that create measurable business
                 value.<br>
+
+                As an <strong>Engineering Manager</strong>, I worked with Product Managers, Tech Leads, and C-level
+                executives to
+                organize and align cross-functional roadmaps, while ensuring code quality and driving key architecture
+                decisions. By owning the entire software delivery pipeline, I was able to create scalable and efficient
+                solutions that accelerated development, improved reliability, and aligned technology with business
+                goals.<br>
 
                 Having lived in the United Kingdom for four years, I am now returning to Europe - a long-held personal
                 goal - as my wife relocates to Tallinn, Estonia. This transition represents an exciting opportunity to
                 continue growing professionally in an international environment.<br>
 
-                I'm currently seeking roles as a Software Engineering Lead or Software Engineering Manager, where I can
+                I'm currently <strong>seeking roles as a Software Engineering Manager or Software Engineering Lead</strong>, where I can
                 continue learning and advancing the state of the art in technology.
               </div>
             </section>
@@ -75,9 +86,10 @@
                 <BadgeTag texto="Technical Leadership" :gold="true" />
                 <BadgeTag texto="Product Ownership" :gold="true" />
                 <BadgeTag texto="Scalability" :gold="true" />
-                <BadgeTag texto="Low-latency Systems" :gold="true" />
+                <BadgeTag texto="Data-Driven Decisions" :gold="true" />
                 <BadgeTag texto="Project Management" :gold="true" />
                 <BadgeTag texto="Mentorship" :gold="true" />
+                <BadgeTag texto="Key Arch. Decisions" :gold="true" />
               </div>
             </section>
 
@@ -100,9 +112,11 @@
               <h2>Best Practices</h2>
               <div class="skill-list">
                 <BadgeTag texto="Agile (Scrum, Kanban)" />
-                <BadgeTag texto="Code Review" />
-                <BadgeTag texto="Continuous feedback" />
+                <BadgeTag texto="Code Quality/Review" />
+                <BadgeTag texto="Continuous Feedback" />
                 <BadgeTag texto="Clean Code" />
+
+
               </div>
             </section>
 
@@ -300,7 +314,7 @@
 
         </div>
         <footer>
-          Frederico Artur Limberger - Seeking roles as Software Engineering Lead / Software Engineering Manager.<br>
+          Frederico Artur Limberger - Seeking roles as Software Engineering Manager / Software Engineering Lead.<br>
           I learned Vue 3 + Typescript + Firebase in a week to create this website. Powered by Vue 3.
         </footer>
       </div>
