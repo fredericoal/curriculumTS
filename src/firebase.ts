@@ -8,7 +8,7 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyDxaXM1C4w0fV9PGCrm05A4qA8yoQQgta8",
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
     authDomain: "curriculumdb-1589d.firebaseapp.com",
     projectId: "curriculumdb-1589d",
     storageBucket: "curriculumdb-1589d.firebasestorage.app",
