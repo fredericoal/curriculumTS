@@ -12,7 +12,7 @@
     <div class="container">
       <div class="card">
         <header>
-          <div class="avatar">FL</div>
+          <div class="avatar no-print">FL</div>
           <div class="title">
             <h1>Frederico Artur Limberger</h1>
             <div class="sub">Head of Platform • Software Engineering Manager</div>
@@ -21,8 +21,11 @@
                 href="https://www.linkedin.com/in/frederico-limberger-phd/">linkedin.com/in/frederico-limberger-phd/</a>]
               <br>GitHub: [<a target="_blank" href="https://www.github.com/fredericoal">github.com/fredericoal</a>]
             </div>
+            <span class="contact only-print">
+              Website: [<a target="_blank" href="https://fredericoal.github.io/curriculumTS/">fredericoal.github.io</a>]
+            </span>
           </div>
-          <div style="text-align:right;min-width:160px">
+          <div class="no-print" style="text-align:right;min-width:160px">
             <div style="font-weight:600;color:var(--accent)">Available for work</div>
             <div style="color:var(--muted);font-size:13px;margin-top:6px">Seeking roles in Tallinn / EU.<br> Open to
               start from January 2026.</div>
@@ -73,7 +76,8 @@
                 goal - as my wife relocates to Tallinn, Estonia. This transition represents an exciting opportunity to
                 continue growing professionally in an international environment.<br>
 
-                I'm currently <strong>seeking roles as a Software Engineering Manager or Software Engineering Lead</strong>, where I can
+                I'm currently <strong>seeking roles as a Software Engineering Manager or Software Engineering
+                  Lead</strong>, where I can
                 continue learning and advancing the state of the art in technology.
               </div>
             </section>
@@ -309,11 +313,14 @@
                 strLink="https://halajun.github.io/3dor15shrec" />
             </ul>
           </section>
-          <br></br>
-          <CounterComponent></CounterComponent>
+
+          <div class="no-print">
+            <br></br>
+            <CounterComponent></CounterComponent>
+          </div>
 
         </div>
-        <footer>
+        <footer class="no-print">
           Frederico Artur Limberger - Seeking roles as Software Engineering Manager / Software Engineering Lead.<br>
           I learned Vue 3 + Typescript + Firebase in a week to create this website. Powered by Vue 3.
         </footer>
@@ -496,9 +503,23 @@ footer {
   font-size: 13px
 }
 
+.only-print {
+  display: none;
+}
+
 @media print {
-  body {
-    background: #fff
+  .no-print {
+    display: none !important;
+  }
+
+  .skill-list {
+    /* grid-template-columns: 1fr 1fr 1fr; */
+  }
+
+  .only-print {
+    margin: 0px;
+    padding: 0px;
+    display: inline;
   }
 
   .container {
@@ -508,7 +529,7 @@ footer {
   }
 
   main {
-    grid-template-columns: 1fr 260px
+    /* grid-template-columns: 1fr 260px */
   }
 }
 
