@@ -301,7 +301,7 @@
         </div>
         <footer>
           Frederico Artur Limberger - Seeking roles as Software Engineering Lead / Software Engineering Manager.<br>
-          I learned Vue 3 + Typescript in a week to create this website. Powered by Vue 3.
+          I learned Vue 3 + Typescript + Firebase in a week to create this website. Powered by Vue 3.
         </footer>
       </div>
     </div>
