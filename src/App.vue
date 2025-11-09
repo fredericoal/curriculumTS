@@ -34,8 +34,8 @@
             <section>
               <h2>Personal Statement</h2>
               <div class="paragraph">
-                I have always been committed to my goals. I'm an easygoing person who has been passionate about
-                technology since childhood.<br>
+                I'm an easygoing person who has been passionate about technology since childhood and have always been
+                committed to my goals.<br>
 
                 I believe my soft skills are strong, as I have been able to adapt and grow quickly when exposed to new
                 environments and challenges throughout my career. My key strengths include passion for what I do,
@@ -328,7 +328,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: justify;
   color: #1969b9ff;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 :root {
@@ -501,6 +501,10 @@ footer {
 /* Responsive */
 
 @media (max-width:820px) {
+  #app {
+    margin-top: 0px;
+  }
+
   main {
     grid-template-columns: 1fr
   }
